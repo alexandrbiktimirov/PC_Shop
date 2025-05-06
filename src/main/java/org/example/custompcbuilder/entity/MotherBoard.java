@@ -13,6 +13,9 @@ public class MotherBoard {
     @Column(name = "name")
     public String name;
 
+    @Column(name = "model")
+    public String model;
+
     @Column(name = "brand")
     public String brand;
 

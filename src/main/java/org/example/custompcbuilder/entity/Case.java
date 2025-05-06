@@ -13,6 +13,9 @@ public class Case {
     @Column(name = "name")
     public String name;
 
+    @Column(name = "model")
+    public String model;
+
     @Column(name = "manufacturer")
     public String manufacturer;
 
