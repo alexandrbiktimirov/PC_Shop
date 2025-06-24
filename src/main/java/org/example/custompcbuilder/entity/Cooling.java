@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "Cooling")
+@Table(name = "cooling")
 public class Cooling extends Component{
     @Column(name = "type", nullable = false)
     private String type;
