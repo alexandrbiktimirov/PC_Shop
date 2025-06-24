@@ -5,8 +5,8 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "GPU")
-public class GPU extends Component{
+@Table(name = "gpu")
+public class Gpu extends Component{
 
     @Column(name = "memory_size_gb", nullable = false)
     private int memorySizeGb;

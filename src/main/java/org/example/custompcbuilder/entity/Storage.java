@@ -5,7 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "Storage")
+@Table(name = "storage")
 public class Storage extends Component{
 
     @Column(name = "type", nullable = false)

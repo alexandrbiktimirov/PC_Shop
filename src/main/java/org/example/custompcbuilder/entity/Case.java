@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "\"Case\"")
+@Table(name = "\"case\"")
 public class Case extends Component{
     @Column(name = "form_factor_support", nullable = false)
     private String formFactorSupport;

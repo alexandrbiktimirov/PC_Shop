@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "Thread")
+@Table(name = "thread")
 public class Thread {
 
     @Id

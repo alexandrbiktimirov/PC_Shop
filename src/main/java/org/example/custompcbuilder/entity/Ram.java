@@ -5,8 +5,8 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "RAM")
-public class RAM extends Component{
+@Table(name = "ram")
+public class Ram extends Component{
 
     @Column(name = "type", nullable = false)
     private String type;

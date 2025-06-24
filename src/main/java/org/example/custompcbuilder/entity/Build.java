@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "Build")
+@Table(name = "build")
 public class Build {
 
     @Id
@@ -21,7 +21,7 @@ public class Build {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "psu_id", nullable = false)
-    private PSU psu;
+    private Psu psu;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "motherboard_id", nullable = false)
@@ -29,7 +29,7 @@ public class Build {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ram_id", nullable = false)
-    private RAM ram;
+    private Ram ram;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "case_id", nullable = false)
@@ -37,11 +37,11 @@ public class Build {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "gpu_id", nullable = false)
-    private GPU gpu;
+    private Gpu gpu;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "cpu_id", nullable = false)
-    private CPU cpu;
+    private Cpu cpu;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "cooling_id", nullable = false)

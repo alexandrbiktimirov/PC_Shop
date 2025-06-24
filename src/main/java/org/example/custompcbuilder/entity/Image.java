@@ -3,7 +3,7 @@ package org.example.custompcbuilder.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Image")
+@Table(name = "image")
 public class Image {
 
     @Id

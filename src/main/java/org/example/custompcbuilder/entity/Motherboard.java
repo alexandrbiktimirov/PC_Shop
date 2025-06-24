@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "Motherboard")
+@Table(name = "motherboard")
 public class Motherboard extends Component{
 
     @Column(name = "socket_type", nullable = false)

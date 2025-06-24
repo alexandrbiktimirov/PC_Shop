@@ -6,6 +6,7 @@ import java.math.BigDecimal;
 import java.util.List;
 
 @Entity
+@Table(name = "component")
 @Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Component {
     @Id

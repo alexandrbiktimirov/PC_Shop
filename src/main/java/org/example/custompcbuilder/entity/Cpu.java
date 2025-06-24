@@ -5,8 +5,8 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "CPU")
-public class CPU extends Component {
+@Table(name = "cpu")
+public class Cpu extends Component {
     @Column(name = "socket_type", nullable = false)
     private String socketType;
 
