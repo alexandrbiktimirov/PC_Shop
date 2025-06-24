@@ -1,4 +1,22 @@
 package org.example.custompcbuilder.entity;
 
-public class GPU {
+import jakarta.persistence.*;
+
+import java.util.List;
+
+@Entity
+@Table(name = "GPU")
+public class GPU extends Component{
+
+    @Column(name = "memory_size_gb", nullable = false)
+    private int memorySizeGb;
+
+    @Column(name = "tdp_watts", nullable = false)
+    private int tdpWatts;
+
+    @Column(name = "length_mm", nullable = false)
+    private int lengthMm;
+
+    @OneToMany(mappedBy = "gpu", fetch = FetchType.LAZY)
+    private List<Build> builds;
 }

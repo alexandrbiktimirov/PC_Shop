@@ -1,0 +1,27 @@
+services:
+  db:
+    image: postgres:15
+    container_name: cpb-db
+    environment:
+      POSTGRES_DB: custompcbuilder
+      POSTGRES_USER: custompcuser
+      POSTGRES_PASSWORD: custompcpass
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  app:
+    build: .
+    container_name: cpb-app
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/custompcbuilder
+      SPRING_DATASOURCE_USERNAME: custompcuser
+      SPRING_DATASOURCE_PASSWORD: custompcpass
+    depends_on:
+      - db
+
+volumes:
+  pgdata:
