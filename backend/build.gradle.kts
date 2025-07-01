@@ -4,6 +4,11 @@ plugins {
     id("io.spring.dependency-management") version "1.1.7"
 }
 
+val copyFrontend by tasks.registering(Copy::class) {
+    from(project.rootDir.resolve("../frontend/build"))
+    into("src/main/resources/static")
+}
+
 group = "org.example"
 version = "0.0.1-SNAPSHOT"
 
@@ -19,7 +24,6 @@ repositories {
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-    implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-validation")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
@@ -30,4 +34,8 @@ dependencies {
 
 tasks.withType<Test> {
     useJUnitPlatform()
+}
+
+tasks.named<ProcessResources>("processResources") {
+    dependsOn(copyFrontend)
 }
