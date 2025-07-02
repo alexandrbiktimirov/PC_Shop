@@ -1,11 +1,19 @@
 package org.example.custompcbuilder.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.List;
 
 @Entity
 @Table(name = "build")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Build {
 
     @Id
@@ -33,7 +41,7 @@ public class Build {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "case_id", nullable = false)
-    private Case aCase;
+    private Case pcCase;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "gpu_id", nullable = false)
@@ -49,7 +57,7 @@ public class Build {
 
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
-            name = "Storage_Build",
+            name = "storage_build",
             joinColumns = @JoinColumn(name = "build_id"),
             inverseJoinColumns = @JoinColumn(name = "storage_id")
     )
