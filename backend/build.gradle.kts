@@ -5,7 +5,7 @@ plugins {
 }
 
 val copyFrontend by tasks.registering(Copy::class) {
-    from(project.rootDir.resolve("../frontend/build"))
+    from(project.rootDir.resolve("../frontend/dist"))
     into("src/main/resources/static")
 }
 
