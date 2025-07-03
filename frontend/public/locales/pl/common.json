@@ -1,0 +1,14 @@
+{
+  "header": {
+    "components": "Komponenty",
+    "forum": "Forum",
+    "searchPlaceholder": "Szukaj...",
+    "searchBtn": "Szukaj",
+    "signup": "Rejestracja",
+    "login": "Logowanie",
+    "myOrders": "Moje zamówienia",
+    "myBuilds": "Moje konfiguracje",
+    "profile": "Profil",
+    "dashboard": "Panel"
+  }
+}
