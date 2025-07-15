@@ -18,19 +18,19 @@ import java.util.List;
 public class Cooling{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    protected Long id;
+    private Long id;
 
     @Column(name = "model_name", nullable = false)
-    protected String modelName;
+    private String modelName;
 
     @Column(name = "brand", nullable = false)
-    protected String brand;
+    private String brand;
 
     @Column(name = "price", nullable = false)
-    protected BigDecimal price;
+    private BigDecimal price;
 
     @Column(name = "quantity", nullable = false)
-    protected int quantity;
+    private int quantity;
 
     @ElementCollection
     @CollectionTable(name = "cooling_images", joinColumns = @JoinColumn(name = "cooling_id"))
