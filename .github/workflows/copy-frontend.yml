@@ -1,0 +1,17 @@
+name: Copy Frontend Assets
+on: [push]
+jobs:
+  copy-frontend:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Java 23
+        uses: actions/setup-java@v3
+        with:
+          distribution: temurin
+          java-version: '23'
+
+      - name: Copy frontend into Spring static folder
+        run: ./gradlew copyFrontend
