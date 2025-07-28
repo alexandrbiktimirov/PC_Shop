@@ -10,5 +10,14 @@
     "myBuilds": "My Builds",
     "profile": "Profile",
     "dashboard": "Dashboard"
+  },
+  "slider": {
+    "compatibility":{
+      "title": "Automatic compatibility checks",
+      "description": "Every time you add a new component to your build, you get automatic compatibility checks."
+    }, "forum":{
+      "title": "Forum",
+      "description": "Join discussions, ask questions, and help other users!"
+    }
   }
 }

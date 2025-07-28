@@ -1,3 +1,4 @@
+import {useTranslation} from "react-i18next";
 import React, { useEffect, useState } from 'react';
 
 interface Slide {
@@ -6,21 +7,22 @@ interface Slide {
     imageUrl: string;
 }
 
-const slides: Slide[] = [
-    {
-        title: "Automatic compatibility checks",
-        description:
-            "Every time you add a new component to your build, you get automatic compatibility checks.",
-        imageUrl: "/assets/slides/compatibility.png",
-    },
-    {
-        title: "Forum",
-        description: "Join discussions, ask questions, and help other users!",
-        imageUrl: "/assets/slides/forum.png",
-    },
-];
-
 export const Slider: React.FC = () => {
+    const {t} = useTranslation();
+
+    const slides: Slide[] = [
+        {
+            title: t('slider.compatibility.title'),
+            description: t('slider.compatibility.description'),
+            imageUrl: "/assets/slides/compatibility.png",
+        },
+        {
+            title: t('slider.forum.title'),
+            description: t('slider.forum.description'),
+            imageUrl: "/assets/slides/forum.png",
+        },
+    ];
+
     const [current, setCurrent] = useState(0);
 
     useEffect(() => {

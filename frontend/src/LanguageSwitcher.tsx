@@ -10,7 +10,7 @@ export const LanguageSwitcher: React.FC = () => {
                 className="border p-1 rounded dark:bg-gray-700 dark:border-gray-600"
         >
             <option value="en">🇺🇸English</option>
-            <option value="pl">🇵🇱Polish</option>
+            <option value="pl">🇵🇱Polski</option>
         </select>
     )
 }

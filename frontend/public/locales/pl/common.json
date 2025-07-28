@@ -10,5 +10,15 @@
     "myBuilds": "Moje konfiguracje",
     "profile": "Profil",
     "dashboard": "Panel"
+  },
+  "slider": {
+    "compatibility": {
+      "title": "Automatyczne sprawdzanie zgodności",
+      "description": "Za każdym razem, gdy dodasz nowy komponent do swojego projektu, otrzymasz automatyczne sprawdzenie zgodności."
+    },
+    "forum": {
+      "title": "Forum",
+      "description": "Dołącz do dyskusji, zadawaj pytania i pomagaj innym użytkownikom!"
+    }
   }
 }
