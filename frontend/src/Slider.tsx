@@ -51,7 +51,7 @@ export const Slider: React.FC = () => {
                         />
                     </div>
 
-                    <div className="absolute inset-0 z-10 bg-black/50 pointer-events-none" />
+                    <div className="absolute inset-0 z-10 bg-black/60 pointer-events-none" />
 
                     <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4">
                         <h2 className="text-4xl font-bold text-white mb-2">
