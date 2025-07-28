@@ -19,5 +19,15 @@
       "title": "Forum",
       "description": "Join discussions, ask questions, and help other users!"
     }
+  },
+  "components": {
+    "cpu": "CPU",
+    "gpu": "GPU",
+    "ram": "RAM",
+    "psu": "PSU",
+    "motherboard": "Motherboard",
+    "case": "Case",
+    "storage": "Storage",
+    "cooling": "Cooling"
   }
 }

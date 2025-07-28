@@ -6,7 +6,15 @@ import {ThemeSwitcher} from "./ThemeSwitcher.tsx";
 
 export const Navigation: React.FC = () => {
     const {t} = useTranslation();
-    const components = ['CPU', 'GPU', 'RAM', 'Motherboard', 'Case', 'Storage', 'Cooling'];
+    const components = [t('components.cpu'),
+                                t('components.gpu'),
+                                t('components.ram'),
+                                t('components.psu'),
+                                t('components.motherboard'),
+                                t('components.case'),
+                                t('components.storage'),
+                                t('components.cooling'),
+    ];
 
     return (
         <nav className="flex items-center space-x-6">

@@ -1,15 +1,19 @@
 import './App.css'
 import {Header} from './Header'
 import {Slider} from "./Slider.tsx";
+import {Components} from "./Components.tsx";
 
 function App() {
   return (
-      <div className="flex flex-col h-screen">
+      <>
           <Header loggedIn={false} />
-          <main className="flex-1">
+
+          <div className="h-[calc(100vh-4rem)] overflow-hidden">
               <Slider />
-          </main>
-      </div>
+          </div>
+
+          <Components />
+      </>
   )
 }
 

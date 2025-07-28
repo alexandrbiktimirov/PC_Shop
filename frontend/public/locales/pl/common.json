@@ -20,5 +20,15 @@
       "title": "Forum",
       "description": "Dołącz do dyskusji, zadawaj pytania i pomagaj innym użytkownikom!"
     }
+  },
+  "components": {
+    "cpu": "CPU",
+    "gpu": "GPU",
+    "ram": "RAM",
+    "psu": "PSU",
+    "motherboard": "Płyta główna",
+    "case": "Obudowa",
+    "storage": "Dysk",
+    "cooling": "Chłodzenie"
   }
 }
