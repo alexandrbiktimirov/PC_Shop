@@ -12,7 +12,7 @@ export const Header: React.FC<HeaderProps> = ({loggedIn, fullName, role}) => {
     return (
         <header className="flex items-center justify-between p-4 bg-gray-100">
             <div className="flex items-center space-x-6">
-                <a href="/"><img src="../public/assets/logo.png" alt="Logo" className="h-6 w-6" /></a>
+                <a href="/"><img src="/assets/logo.png" alt="Logo" className="h-6 w-6" /></a>
                 <Navigation />
             </div>
 
