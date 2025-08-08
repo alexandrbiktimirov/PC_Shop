@@ -4,12 +4,18 @@
     "forum": "Forum",
     "searchPlaceholder": "Search...",
     "searchBtn": "Search",
-    "signup": "Sign Up",
+    "signup": "Register",
     "login": "Log In",
     "myOrders": "My Orders",
     "myBuilds": "My Builds",
     "profile": "Profile",
     "dashboard": "Dashboard"
+  },
+  "footer": {
+    "home" : "Home",
+    "forum" : "Forum",
+    "profile" : "Profile",
+    "rights" : "All rights reserved"
   },
   "slider": {
     "compatibility":{
@@ -29,5 +35,9 @@
     "case": "Case",
     "storage": "Storage",
     "cooling": "Cooling"
+  },
+  "messages": {
+    "notFound": "404: This page does not exist :(",
+    "inDevelopment" : "Right now this page is being developed, sorry for inconvenience :)"
   }
 }

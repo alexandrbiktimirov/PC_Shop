@@ -11,6 +11,12 @@
     "profile": "Profil",
     "dashboard": "Panel"
   },
+  "footer": {
+    "home" : "Strona główna",
+    "forum" : "Forum",
+    "profile" : "Profil",
+    "rights" : "Wszelkie prawa zastrzeżone"
+  },
   "slider": {
     "compatibility": {
       "title": "Automatyczne sprawdzanie zgodności",
@@ -30,5 +36,9 @@
     "case": "Obudowa",
     "storage": "Dysk",
     "cooling": "Chłodzenie"
+  },
+  "messages": {
+    "notFound": "404: Ta strona nie istnieje :(",
+    "inDevelopment": "Ta strona jest w trakcie tworzenia – przepraszamy za niedogodności :)"
   }
 }

@@ -1,1 +1,266 @@
 @import "tailwindcss";
+
+:root {
+    /* Card */
+    --card-bg: #1f2937;
+    --card-text: #f9fafb;
+    --card-hover-border: #3b82f6;
+
+    /* Header */
+    --header-bg: #f3f4f6;
+    --header-text: #1f2937;
+    --link-hover: #2563eb;
+
+    /* Footer */
+    --footer-bg: #1f2937;
+    --footer-text: #d1d5db;
+
+    /* Menus */
+    --menu-bg: #ffffff;
+    --menu-text: #111827;
+    --menu-hover-bg: #e5e7eb;
+
+    /* Form inputs */
+    --input-bg: #ffffff;
+    --input-text: #111827;
+    --input-border: #d1d5db;
+}
+
+.dark {
+    --card-bg: #374151;
+    --card-text: #f9fafb;
+    --card-hover-border: #60a5fa;
+
+    --header-bg: #111827;
+    --header-text: #f9fafb;
+    --link-hover: #3b82f6;
+
+    --footer-bg: #111827;
+    --footer-text: #9ca3af;
+
+    --menu-bg: #1f2937;
+    --menu-text: #f9fafb;
+    --menu-hover-bg: #4b5563;
+
+    --input-bg: #374151;
+    --input-text: #f9fafb;
+    --input-border: #4b5563;
+}
+
+@layer components{
+    /* Layout */
+    .page-wrapper{
+        @apply flex flex-col min-h-screen;
+    }
+
+    .page-content{
+        @apply flex-1 flex flex-col justify-center;
+    }
+
+    .info {
+        @apply text-center text-lg;
+    }
+
+    /* Components grid */
+    .component-card {
+        @apply w-26 h-26 rounded-lg flex items-center justify-center
+                border border-transparent transform transition duration-200 ease-in-out
+                hover:shadow-lg;
+        background-color: var(--card-bg);
+    }
+
+    .component-card:hover {
+        border-color: var(--card-hover-border);
+    }
+
+    .component-label {
+        @apply text-sm font-medium text-center break-words;
+        color: var(--card-text);
+    }
+
+    /* Header and navigation */
+    .header {
+        @apply flex items-center justify-between p-4;
+        background-color: var(--header-bg);
+        color: var(--header-text);
+    }
+
+    .navigation {
+        @apply flex items-center space-x-6;
+    }
+
+    .nav-link {
+        @apply hover:underline transition;
+        color: var(--header-text);
+    }
+
+    .dropdown{
+        @apply relative inline-block;
+    }
+
+    .dropdown-btn {
+        @apply px-2 py-2 rounded;
+        background: none;
+        color: var(--header-text);
+    }
+
+    .dropdown-btn:hover{
+        background-color: var(--menu-hover-bg);
+    }
+
+    .dropdown-menu{
+        @apply hidden absolute left-0 mt-2 w-40 border rounded shadow-lg z-10;
+        background-color: var(--menu-bg);
+    }
+
+    .dropdown-menu.show {
+        @apply block;
+    }
+
+    .dropdown-item{
+        @apply block px-4 py-2 rounded transition;
+        color: var(--menu-text);
+    }
+
+    .dropdown-item:hover{
+        background-color: var(--menu-hover-bg);
+    }
+
+    /* Search */
+    .search-form {
+        @apply relative flex items-center;
+    }
+
+    .search-input {
+        @apply w-full border rounded pl-2 pr-10 py-1;
+        background-color: var(--input-bg);
+        color: var(--input-text);
+        border-color: var(--input-border);
+    }
+
+    .search-button{
+        @apply absolute right-1 top-1/2 -translate-y-1/2 p-1 rounded;
+    }
+
+    .search-button:hover{
+        background-color: var(--menu-hover-bg);
+    }
+
+    /* Theme & Language switchers */
+    .theme-switcher, .language-switcher {
+        @apply p-1 rounded;
+        background: none;
+        color: var(--header-text);
+    }
+
+    .theme-switcher:hover, .language-switcher:hover{
+        background-color: var(--menu-hover-bg);
+    }
+
+    /* Header menus */
+    .header-menu {
+        @apply flex space-x-4;
+    }
+
+    .header-link {
+        @apply transition;
+        color: var(--header-text);
+    }
+
+    .header-link:hover {
+        color: var(--link-hover);
+    }
+
+    .header-btn {
+        @apply px-4 py-2 rounded;
+        background: none;
+        color: var(--header-text);
+    }
+
+    .header-btn:hover {
+        background-color: var(--menu-hover-bg);
+    }
+
+    .menu-list {
+        @apply absolute right-0 mt-2 w-48 border rounded shadow-lg z-10;
+        background-color: var(--menu-bg);
+    }
+
+    .menu-item {
+        @apply block px-4 py-2 rounded transition;
+        color: var(--menu-text);
+    }
+
+    .menu-item:hover {
+        background-color: var(--menu-hover-bg);
+    }
+
+    /* Footer */
+    .footer {
+        @apply text-center py-6 mt-5;
+        background-color: var(--footer-bg);
+        color: var(--footer-text);
+    }
+
+    .footer-links {
+        @apply space-x-6 mb-4;
+    }
+
+    .footer-link {
+        @apply transition;
+        color: var(--footer-text);
+    }
+
+    .footer-link:hover {
+        color: #ffffff;
+    }
+
+    .social-icons {
+        @apply flex justify-center space-x-4 mb-4 text-xl;
+    }
+
+    /* Slider */
+    .slider {
+        @apply relative w-full h-[calc(100vh-4rem)] overflow-hidden;
+    }
+
+    .slide-item {
+        @apply absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0 pointer-events-none;
+    }
+
+    .slide-item-active {
+        @apply opacity-100 pointer-events-auto;
+    }
+
+    .slide-overlay {
+        @apply absolute inset-0;
+        background-color: rgba(0,0,0,0.6);
+    }
+
+    .slide-content {
+        @apply absolute inset-0 flex flex-col items-center justify-center text-center px-4;
+    }
+
+    .slide-title {
+        @apply text-4xl font-bold mb-2;
+        color: var(--card-text);
+    }
+
+    .slide-desc {
+        @apply text-lg max-w-xl;
+        color: var(--card-text);
+    }
+
+    .slider-dots {
+        @apply absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2;
+    }
+
+    .slider-dot {
+        @apply w-3 h-3 rounded-full focus:outline-none;
+        background-color: var(--menu-hover-bg);
+    }
+
+    .slider-dot-active {
+        background-color: var(--footer-text);
+    }
+}

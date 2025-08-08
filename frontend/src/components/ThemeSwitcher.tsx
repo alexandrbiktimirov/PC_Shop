@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState} from 'react';
 import {Sun, Moon} from 'lucide-react';
 
 export const ThemeSwitcher: React.FC = () => {
@@ -9,15 +9,15 @@ export const ThemeSwitcher: React.FC = () => {
         if (dark) {
             root.classList.add('dark');
             localStorage.theme = 'dark';
-        } else{
+        } else {
             root.classList.remove('dark');
             localStorage.theme = 'light';
         }
     }, [dark]);
 
     return (
-        <button onClick={() => setDark(prev => !prev)} className="p-1 rounded hover:bg-gray-200 dark:hover:bg-gray-700">
-            {dark ? <Sun /> : <Moon />}
+        <button onClick={() => setDark((d) => !d)} className="theme-switcher-btn">
+            {dark ? <Moon /> : <Sun />}
         </button>
-    )
-}
+    );
+};
