@@ -4,7 +4,6 @@ import {RootLayout} from "./layout/RootLayout.tsx";
 import {Home} from "./pages/Home.tsx";
 import {Login} from "./pages/Login.tsx";
 import {Register} from "./pages/Register.tsx";
-import {Forum} from "./pages/Forum.tsx";
 import {NotFound} from "./pages/NotFound.tsx";
 
 function App() {
@@ -13,7 +12,6 @@ function App() {
         createRoutesFromElements(
             <Route path='/' element={<RootLayout/>}>
                 <Route index element={<Home/>}/>
-                <Route path='forum' element={<Forum/>}/>
                 <Route path='login' element={<Login/>}/>
                 <Route path='register' element={<Register/>}/>
                 <Route path='*' element={<NotFound/>}/>
