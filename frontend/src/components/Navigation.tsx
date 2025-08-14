@@ -24,7 +24,7 @@ export const Navigation: React.FC = () => {
 
     return (
         <nav className="navigation">
-            <NavLink to="/" className="nav-link">
+            <NavLink to="/">
                 <img src="/assets/logo.png" alt="Logo" className="h-10 w-10" />
             </NavLink>
 
@@ -38,8 +38,6 @@ export const Navigation: React.FC = () => {
                     ))}
                 </ul>
             </div>
-
-            <NavLink to="/forum" className="nav-link">{t('header.forum')}</NavLink>
 
             <form onSubmit={(e) => {
                     e.preventDefault();
