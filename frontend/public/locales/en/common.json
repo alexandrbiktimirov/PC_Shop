@@ -39,5 +39,11 @@
   "messages": {
     "notFound": "404: This page does not exist :(",
     "inDevelopment" : "Right now this page is being developed, sorry for inconvenience :)"
+  },
+  "login": {
+    "password": "Password",
+    "loginButton": "Login",
+    "notRegistered": "Not registered?",
+    "createAnAccount": "Create an account"
   }
 }

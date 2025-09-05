@@ -40,5 +40,11 @@
   "messages": {
     "notFound": "404: Ta strona nie istnieje :(",
     "inDevelopment": "Ta strona jest w trakcie tworzenia – przepraszamy za niedogodności :)"
+  },
+  "login": {
+    "password": "Hasło",
+    "loginButton": "Zaloguj się",
+    "notRegistered": "Nie zarejestrowany?",
+    "createAnAccount": "Zarejestruj się"
   }
 }

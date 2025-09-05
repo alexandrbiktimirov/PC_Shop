@@ -2,18 +2,18 @@
 
 :root {
     /* Card */
-    --card-bg: #1f2937;
-    --card-text: #f9fafb;
+    --card-bg: #3d5a80;
+    --card-text: #ffffff;
     --card-hover-border: #3b82f6;
 
     /* Header */
-    --header-bg: #f3f4f6;
-    --header-text: #1f2937;
-    --link-hover: #2563eb;
+    --header-bg: #3d5a80;
+    --header-text: #ffffff;
+    --link-hover: #98c1d9;
 
     /* Footer */
-    --footer-bg: #1f2937;
-    --footer-text: #d1d5db;
+    --footer-bg: #3d5a80;
+    --footer-text: #e0fbfc;
 
     /* Menus */
     --menu-bg: #ffffff;
@@ -76,6 +76,45 @@
     .component-label {
         @apply text-sm font-medium text-center break-words;
         color: var(--card-text);
+    }
+
+    /* Login and registration forms */
+    .login-form {
+        @apply max-w-md w-full mx-auto p-8 rounded-lg shadow-md space-y-6;
+        background-color: var(--card-bg);
+        color: var(--card-text);
+    }
+
+    .login-input {
+        @apply block w-full px-4 py-2 rounded-lg;
+        background-color: var(--input-bg);
+        color: var(--input-text);
+        border: 1px solid var(--input-border);
+        outline: none;
+    }
+
+    .login-input:focus {
+        box-shadow: 0 0 0 2px var(--link-hover);
+    }
+
+    .login-button {
+        @apply w-full py-2 rounded-lg;
+        background-color: var(--link-hover);
+        color: var(--card-text);
+        transition: background-color .2s;
+    }
+    .login-button:hover {
+        background-color: var(--card-hover-border);
+    }
+
+    .login-message {
+        @apply text-center text-sm;
+        color: var(--menu-text);
+    }
+
+    .login-message a {
+        color: var(--link-hover);
+        @apply hover:underline;
     }
 
     /* Header and navigation */
