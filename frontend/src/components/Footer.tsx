@@ -10,7 +10,6 @@ export const Footer: React.FC = () => {
         <footer className="footer">
             <div className="footer-links">
                 <Link to="/" className="footer-link">{t('footer.home')}</Link>
-                <Link to="/forum" className="footer-link">{t('footer.forum')}</Link>
                 <Link to="/profile" className="footer-link">{t('footer.profile')}</Link>
             </div>
 

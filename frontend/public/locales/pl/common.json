@@ -1,7 +1,6 @@
 {
   "header": {
     "components": "Komponenty",
-    "forum": "Forum",
     "searchPlaceholder": "Szukaj...",
     "searchBtn": "Szukaj",
     "signup": "Rejestracja",
@@ -13,7 +12,6 @@
   },
   "footer": {
     "home" : "Strona główna",
-    "forum" : "Forum",
     "profile" : "Profil",
     "rights" : "Wszelkie prawa zastrzeżone"
   },
