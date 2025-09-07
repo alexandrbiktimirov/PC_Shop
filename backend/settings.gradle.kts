@@ -1,1 +1,1 @@
-rootProject.name = "CustomPCBuilder"
+rootProject.name = "PC_Shop"
