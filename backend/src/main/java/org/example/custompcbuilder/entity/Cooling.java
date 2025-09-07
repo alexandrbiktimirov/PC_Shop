@@ -48,7 +48,4 @@ public class Cooling{
 
     @Column(name = "tdp_watts_rating")
     private int tdpWattsRating;
-
-    @OneToMany(mappedBy = "cooling", fetch = FetchType.LAZY)
-    private List<Build> builds;
 }

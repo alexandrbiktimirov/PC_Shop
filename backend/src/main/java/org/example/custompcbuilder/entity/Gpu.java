@@ -49,7 +49,4 @@ public class Gpu{
 
     @Column(name = "length_mm", nullable = false)
     private int lengthMm;
-
-    @OneToMany(mappedBy = "gpu", fetch = FetchType.LAZY)
-    private List<Build> builds;
 }

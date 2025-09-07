@@ -45,7 +45,4 @@ public class Case{
 
     @Column(name = "max_gpu_length_mm", nullable = false)
     private int maxGpuLengthMm;
-
-    @OneToMany(mappedBy = "pcCase", fetch = FetchType.LAZY)
-    private List<Build> builds;
 }

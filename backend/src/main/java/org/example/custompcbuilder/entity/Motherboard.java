@@ -41,7 +41,4 @@ public class Motherboard{
 
     @Column(name = "supported_memory_type", nullable = false)
     private String supportedMemoryType;
-
-    @OneToMany(mappedBy = "motherboard", fetch = FetchType.LAZY)
-    private List<Build> builds;
 }

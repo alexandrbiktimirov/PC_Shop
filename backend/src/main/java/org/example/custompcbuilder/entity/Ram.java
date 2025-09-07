@@ -49,7 +49,4 @@ public class Ram{
 
     @Column(name = "speed_mhz", nullable = false)
     private int speedMhz;
-
-    @OneToMany(mappedBy = "ram", fetch = FetchType.LAZY)
-    private List<Build> builds;
 }

@@ -46,7 +46,4 @@ public class Psu{
 
     @Column(name = "form_factor", nullable = false)
     private String formFactor;
-
-    @OneToMany(mappedBy = "psu", fetch = FetchType.LAZY)
-    private List<Build> builds;
 }

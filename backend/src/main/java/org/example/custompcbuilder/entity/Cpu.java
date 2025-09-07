@@ -51,7 +51,4 @@ public class Cpu {
 
     @Column(name = "tdp_watts", nullable = false)
     private int tdpWatts;
-
-    @OneToMany(mappedBy = "cpu", fetch = FetchType.LAZY)
-    private List<Build> builds;
 }
