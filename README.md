@@ -1,4 +1,4 @@
-# Custom PC Builder Shop
+# PC Shop
 
 **Problem area** – this web-application allows PC enthusiasts, small system integrators, IT departments, and just regular users to easily build custom personal computers, where compatibility of each detail is automatically checked, and where users can easily buy those details in one place. It also allows users to discuss certain topics related to builds by using a forum.
 
