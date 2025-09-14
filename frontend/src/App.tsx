@@ -5,6 +5,7 @@ import {Home} from "./pages/Home.tsx";
 import {Login} from "./pages/Login.tsx";
 import {Register} from "./pages/Register.tsx";
 import {NotFound} from "./pages/NotFound.tsx";
+import {ComponentsPage} from "./pages/ComponentsPage.tsx";
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
                 <Route index element={<Home/>}/>
                 <Route path='login' element={<Login/>}/>
                 <Route path='register' element={<Register/>}/>
+                <Route path='components/:type' element={<ComponentsPage/>}/>
                 <Route path='*' element={<NotFound/>}/>
             </Route>
         )
