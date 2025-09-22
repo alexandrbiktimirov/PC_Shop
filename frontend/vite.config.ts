@@ -13,5 +13,13 @@ export default defineConfig({
   },
   define: {
     __LOCALES_PATH__: JSON.stringify('/locales')
-  }
+  },
+    server: {
+      proxy : {
+          "/api" : {
+              target: "http://localhost:8000",
+              changeOrigin: true,
+          }
+      }
+    }
 })
