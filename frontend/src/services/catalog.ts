@@ -1,0 +1,35 @@
+import type {CpuDto, CardItem} from "../components/Types.tsx";
+
+async function http<T> (url: string): Promise<T> {
+    const result = await fetch(url);
+    if (!result.ok) {
+        throw new Error(`HTTP ${result.status}`);
+    }
+
+    return result.json();
+}
+
+export async function fetchList(type:string): Promise<{id:number;brand:string;modelName:string;imageUrls:string[]}[]> {
+    switch (type) {
+        case "cpus":
+            {
+                const cpus:CpuDto[] = await http<CpuDto[]>("/api/v1/cpus");
+                return cpus.map(c => ({
+                    id: c.id,
+                    brand: c.brand,
+                    modelName: c.modelName,
+                    imageUrls: c.imageUrls,
+                }));
+            }
+        default:
+            return [];
+    }
+}
+
+export function toCardItem(raw: {id:number;brand:string;modelName:string;imageUrls:string[]}) : CardItem {
+    return {
+        id: raw.id,
+        title: `${raw.brand} ${raw.modelName}`,
+        imageUrl: raw.imageUrls[0],
+    }
+}

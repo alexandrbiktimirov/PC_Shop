@@ -17,7 +17,7 @@ export const Components: React.FC = () => {
                     const lookupKey = key.toLowerCase();
 
                     return (
-                        <Link key={key} to={`/components/${lookupKey}`} className="block">
+                        <Link key={key} to={`/components/${lookupKey}s`} className="block">
                             <div className="component-card">
                                 <span className="component-label">{t(`components.${lookupKey}`)}</span>
                             </div>

@@ -33,7 +33,7 @@ export const Navigation: React.FC = () => {
                 <ul className={`dropdown-menu ${open ? 'show' : ''}`}>
                     {componentKeys.map((key) => (
                         <li key={key}>
-                            <NavLink to={`/components/${key}`} className="dropdown-item">{t(`components.${key}`)}</NavLink>
+                            <NavLink to={`/components/${key}s`} className="dropdown-item">{t(`components.${key}`)}</NavLink>
                         </li>
                     ))}
                 </ul>
