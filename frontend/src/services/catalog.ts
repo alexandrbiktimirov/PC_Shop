@@ -9,7 +9,7 @@ async function http<T> (url: string): Promise<T> {
     return result.json();
 }
 
-export async function fetchList(type:string): Promise<{id:number;brand:string;modelName:string;imageUrls:string[]}[]> {
+export async function fetchList(type:string): Promise<{id:number;brand:string;modelName:string;price:number;quantity:number;imageUrls:string[]}[]> {
     switch (type) {
         case "cpus":
             {
@@ -18,6 +18,8 @@ export async function fetchList(type:string): Promise<{id:number;brand:string;mo
                     id: c.id,
                     brand: c.brand,
                     modelName: c.modelName,
+                    price: c.price,
+                    quantity: c.quantity,
                     imageUrls: c.imageUrls,
                 }));
             }
@@ -26,10 +28,12 @@ export async function fetchList(type:string): Promise<{id:number;brand:string;mo
     }
 }
 
-export function toCardItem(raw: {id:number;brand:string;modelName:string;imageUrls:string[]}) : CardItem {
+export function toCardItem(raw: {id:number;brand:string;modelName:string;price:number;quantity:number;imageUrls:string[]}) : CardItem {
     return {
         id: raw.id,
         title: `${raw.brand} ${raw.modelName}`,
+        price: raw.price,
+        quantity: raw.quantity,
         imageUrl: raw.imageUrls[0],
     }
 }

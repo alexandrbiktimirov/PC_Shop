@@ -1,9 +1,11 @@
 type Props = {
     title: string;
+    price: number;
+    quantity: number;
     imageUrl?: string;
 };
 
-export function ComponentCard({ title, imageUrl }: Props) {
+export function ComponentCard({ title, price, quantity, imageUrl }: Props) {
     return (
         <article
             className="
@@ -28,6 +30,12 @@ export function ComponentCard({ title, imageUrl }: Props) {
                 )}
             </div>
             <h3 className="text-base font-semibold leading-snug">{title}</h3>
+            <div className="flex items-center justify-between gap-2">
+                <p>{price} PLN</p>
+                <p className={quantity === 0 ? "text-red-500 font-semibold" : ""}>
+                    {quantity === 0 ? "Sold out" : quantity}
+                </p>
+            </div>
         </article>
     );
 }

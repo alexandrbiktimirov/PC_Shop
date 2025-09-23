@@ -6,6 +6,7 @@ import {Login} from "./pages/Login.tsx";
 import {Register} from "./pages/Register.tsx";
 import {NotFound} from "./pages/NotFound.tsx";
 import {ComponentsPage} from "./pages/ComponentsPage.tsx";
+import {ComponentPage} from "./pages/ComponentPage.tsx";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
                 <Route path='login' element={<Login/>}/>
                 <Route path='register' element={<Register/>}/>
                 <Route path='components/:type' element={<ComponentsPage/>}/>
+                <Route path='components/:type/:id' element={<ComponentPage/>}/>
                 <Route path='*' element={<NotFound/>}/>
             </Route>
         )
@@ -28,4 +30,4 @@ function App() {
     )
 }
 
-export default App
+export default App;

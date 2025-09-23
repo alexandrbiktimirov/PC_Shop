@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import { fetchList, toCardItem } from "../services/catalog";
 import type { CardItem } from "../components/Types.tsx";
 import { ComponentCard } from "../components/ComponentCard";
@@ -38,7 +38,11 @@ export const ComponentsPage: React.FC = () => {
             {!loading && !err && items.length === 0 && <p className="info">No items.</p>}
 
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-                {items.map(i => <ComponentCard key={i.id} title={i.title} imageUrl={i.imageUrl} />)}
+                {items.map(i =>
+                    <Link to={`/components/${type}/${i.id}`}>
+                        <ComponentCard key={i.id} title={i.title} price={i.price} quantity={i.quantity} imageUrl={i.imageUrl} />
+                    </Link>
+                )}
             </div>
         </div>
     );
