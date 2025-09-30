@@ -24,3 +24,27 @@ INSERT INTO cpu_images (cpu_id, image_url) VALUES
 
 TRUNCATE cpu_images;
 TRUNCATE cpu CASCADE;
+
+INSERT INTO gpu (id, model_name, brand, price, quantity, memory_size_gb, tdp_watts, length_mm) VALUES
+(1,  'GeForce RTX 4090',         'NVIDIA', 1599.00, 10, 24, 450, 336),
+(2,  'GeForce RTX 4080 SUPER',   'NVIDIA',  999.00, 18, 16, 320, 310),
+(3,  'GeForce RTX 4070 Ti SUPER','NVIDIA',  799.00, 20, 16, 285, 305),
+(4,  'GeForce RTX 4070 SUPER',   'NVIDIA',  599.00, 28, 12, 220, 250),
+(5,  'GeForce RTX 4060',         'NVIDIA',  299.00, 35,  8, 115, 242),
+(6,  'Radeon RX 7900 XTX',       'AMD',     999.00, 12, 24, 355, 287),
+(7,  'Radeon RX 7900 XT',        'AMD',     899.00, 15, 20, 315, 276),
+(8,  'Radeon RX 7800 XT',        'AMD',     499.00, 25, 16, 263, 267),
+(9,  'Radeon RX 7700 XT',        'AMD',     449.00, 22, 12, 245, 267),
+(10, 'Arc A770 16GB',            'Intel',   329.00, 18, 16, 225, 280);
+
+INSERT INTO gpu_images (gpu_id, image_url) VALUES
+(1,  'https://upload.wikimedia.org/wikipedia/commons/7/76/Asus_Strix_RTX_4090.jpg'),
+(2,  'https://upload.wikimedia.org/wikipedia/commons/7/76/Asus_Strix_RTX_4090.jpg'),
+(3,  'https://upload.wikimedia.org/wikipedia/commons/7/76/Asus_Strix_RTX_4090.jpg'),
+(4,  'https://upload.wikimedia.org/wikipedia/commons/7/76/Asus_Strix_RTX_4090.jpg'),
+(5,  'https://upload.wikimedia.org/wikipedia/commons/7/76/Asus_Strix_RTX_4090.jpg'),
+(6,  'https://upload.wikimedia.org/wikipedia/commons/a/a8/Sapphire_AMD_Radeon_RX_7900_XTX.jpg'),
+(7,  'https://upload.wikimedia.org/wikipedia/commons/a/a8/Sapphire_AMD_Radeon_RX_7900_XTX.jpg'),
+(8,  'https://upload.wikimedia.org/wikipedia/commons/a/a8/Sapphire_AMD_Radeon_RX_7900_XTX.jpg'),
+(9,  'https://upload.wikimedia.org/wikipedia/commons/a/a8/Sapphire_AMD_Radeon_RX_7900_XTX.jpg'),
+(10, 'https://upload.wikimedia.org/wikipedia/commons/a/a8/Sapphire_AMD_Radeon_RX_7900_XTX.jpg');
