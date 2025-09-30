@@ -1,8 +1,0 @@
-spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5432/custompcbuilder
-    username: custompcuser
-    password: custompcpass
-  jpa:
-    hibernate:
-      ddl-auto: none
