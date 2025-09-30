@@ -4,24 +4,18 @@ import jakarta.validation.Valid;
 import org.example.custompcbuilder.dto.cpu.CpuCreateDto;
 import org.example.custompcbuilder.dto.cpu.CpuDto;
 import org.example.custompcbuilder.dto.cpu.CpuUpdateDto;
-import org.example.custompcbuilder.exception.CpuNotFound;
+import org.example.custompcbuilder.exception.CpuNotFoundException;
 import org.example.custompcbuilder.service.CpuService;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.FieldError;
-import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/api/v1/cpus")
 public class CpuController {
-
     private final CpuService cpuService;
 
     public CpuController(CpuService cpuService) {
@@ -34,12 +28,12 @@ public class CpuController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<CpuDto> getCpuById(@PathVariable Long id) throws CpuNotFound {
+    public ResponseEntity<CpuDto> getCpuById(@PathVariable Long id) throws CpuNotFoundException {
         return ResponseEntity.ok(cpuService.getCpuById(id));
     }
 
     @PatchMapping("/{id}")
-    public ResponseEntity<Void> updateCpu(@PathVariable Long id, @RequestBody @Valid CpuUpdateDto cpuUpdateDto) throws CpuNotFound {
+    public ResponseEntity<Void> updateCpu(@PathVariable Long id, @RequestBody @Valid CpuUpdateDto cpuUpdateDto) throws CpuNotFoundException {
         cpuService.updateCpu(id, cpuUpdateDto);
 
         return ResponseEntity.noContent().build();
@@ -63,21 +57,5 @@ public class CpuController {
         cpuService.deleteCpu(id);
 
         return ResponseEntity.noContent().build();
-    }
-
-    @ExceptionHandler(CpuNotFound.class)
-    public ResponseEntity<String> handleCpuNotFound(CpuNotFound cpuNotFound) {
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(cpuNotFound.getMessage());
-    }
-
-    @ExceptionHandler(MethodArgumentNotValidException.class)
-    public ResponseEntity<Map<String, String>> handleValidationExceptions(MethodArgumentNotValidException ex) {
-        Map<String, String> errors = new HashMap<>();
-
-        for (FieldError fieldError : ex.getBindingResult().getFieldErrors()) {
-            errors.put(fieldError.getField(), fieldError.getDefaultMessage());
-        }
-
-        return ResponseEntity.badRequest().body(errors);
     }
 }
