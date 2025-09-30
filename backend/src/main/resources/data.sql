@@ -11,13 +11,16 @@ INSERT INTO cpu (id, model_name, brand, price, quantity, socket_type, core_count
 (10,'Core i5-12400',  'Intel', 189.00, 22, 'LGA1700', 6, 12,  65);
 
 INSERT INTO cpu_images (cpu_id, image_url) VALUES
-(1,  'https://www.amd.com/en/products/processors/desktops/ryzen/7000-series/amd-ryzen-9-7950x.html'),
-(2,  'https://www.amd.com/en/products/processors/desktops/ryzen/7000-series/amd-ryzen-7-7800x3d.html'),
-(3,  'https://www.amd.com/en/products/processors/desktops/ryzen/7000-series/amd-ryzen-5-7600.html'),
-(4,  'https://www.amd.com/en/support/downloads/drivers.html/processors/ryzen/ryzen-5000-series/amd-ryzen-5-5600.html'),
-(5,  'https://www.amd.com/en/support/downloads/drivers.html/processors/ryzen/ryzen-5000-series/amd-ryzen-7-5700g.html'),
-(6,  'https://www.intel.com/content/www/us/en/products/sku/236773/intel-core-i9-processor-14900k-36m-cache-up-to-6-00-ghz/specifications.html'),
-(7,  'https://www.intel.com/content/www/us/en/products/sku/236799/intel-core-i5-processor-14600k-24m-cache-up-to-5-30-ghz/specifications.html'),
-(8,  'https://www.intel.com/content/www/us/en/products/sku/134592/intel-core-i712700f-processor-25m-cache-up-to-4-90-ghz/specifications.html'),
-(9,  'https://www.intel.com/content/www/us/en/products/sku/236774/intel-core-i3-processor-14100-12m-cache-up-to-4-70-ghz/specifications.html'),
-(10, 'https://www.intel.com/content/www/us/en/products/sku/134586/intel-core-i5-12400-processor-18m-cache-up-to-4-40-ghz/specifications.html');
+(1,  'https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2505503-ryzen-9-7900x.jpg'),
+(2,  'https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2505503-ryzen-7-7800x3d.jpg'),
+(3,  'https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2023/1/pr_2023_1_10_11_49_33_369_00.jpg'),
+(4,  'https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2022/4/pr_2022_4_4_13_1_27_284_00.jpg'),
+(5,  'https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2021/8/pr_2021_8_4_13_57_4_57_00.jpg'),
+(6,  'https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2023/10/pr_2023_10_12_8_43_7_810_00.jpg'),
+(7,  'https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2023/10/pr_2023_10_12_9_30_38_189_00.jpg'),
+(8,  'https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2021/12/pr_2021_12_23_9_43_8_505_00.jpg'),
+(9,  'https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2024/1/pr_2024_1_5_8_42_11_723_00.jpg'),
+(10, 'https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2021/12/pr_2021_12_23_9_30_34_58_00.jpg');
+
+TRUNCATE cpu_images;
+TRUNCATE cpu CASCADE;
