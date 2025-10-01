@@ -1,4 +1,4 @@
-import type {CpuDto, CardItem} from "../components/Types.tsx";
+import type {CpuDto, CardItem, GpuDto} from "../components/Types.tsx";
 
 async function http<T> (url: string): Promise<T> {
     const result = await fetch(url);
@@ -21,6 +21,18 @@ export async function fetchList(type:string): Promise<{id:number;brand:string;mo
                     price: c.price,
                     quantity: c.quantity,
                     imageUrls: c.imageUrls,
+                }));
+            }
+        case "gpus":
+            {
+                const gpus:GpuDto[] = await http<GpuDto[]>("/api/v1/gpus");
+                return gpus.map(g => ({
+                    id: g.id,
+                    brand: g.brand,
+                    modelName: g.modelName,
+                    price: g.price,
+                    quantity: g.quantity,
+                    imageUrls: g.imageUrls,
                 }));
             }
         default:

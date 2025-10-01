@@ -11,6 +11,18 @@ export type CpuDto = {
     tdpWatts: number;
 }
 
+export type GpuDto = {
+    id: number;
+    brand: string;
+    modelName: string;
+    price: number;
+    quantity: number;
+    imageUrls: string[];
+    memorySizeGb: number;
+    tdpWatts: number;
+    lengthMm: number;
+}
+
 export type CardItem = {
     id: number;
     title: string;
