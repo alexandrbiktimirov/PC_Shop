@@ -1,0 +1,7 @@
+package org.example.custompcbuilder.exception;
+
+public class CaseNotFoundException extends Exception {
+    public CaseNotFoundException(String message) {
+        super(message);
+    }
+}
