@@ -48,3 +48,33 @@ INSERT INTO gpu_images (gpu_id, image_url) VALUES
 (8,  'https://upload.wikimedia.org/wikipedia/commons/a/a8/Sapphire_AMD_Radeon_RX_7900_XTX.jpg'),
 (9,  'https://upload.wikimedia.org/wikipedia/commons/a/a8/Sapphire_AMD_Radeon_RX_7900_XTX.jpg'),
 (10, 'https://upload.wikimedia.org/wikipedia/commons/a/a8/Sapphire_AMD_Radeon_RX_7900_XTX.jpg');
+
+TRUNCATE gpu;
+TRUNCATE gpu_images;
+
+INSERT INTO cooling (id, model_name, brand, price, quantity, type, supported_sockets, tdp_watts_rating) VALUES
+(1,  'NH-D15',                'Noctua',       99.00,  25, 'Air',      'AM4, AM5, LGA1700, LGA1200', 220),
+(2,  'Dark Rock Pro 4',       'be quiet!',     89.00,  30, 'Air',      'AM4, AM5, LGA1700, LGA1200', 250),
+(3,  'Hyper 212 Black Edition','Cooler Master',45.00,  40, 'Air',      'AM4, LGA1700, LGA1200',      180),
+(4,  'DeepCool AK620',        'DeepCool',      65.00,  35, 'Air',      'AM4, AM5, LGA1700, LGA1200', 260),
+(5,  'Thermalright Peerless Assassin 120', 'Thermalright',39.00, 50, 'Air', 'AM4, AM5, LGA1700, LGA1200', 210),
+(6,  'NZXT Kraken Elite 360', 'NZXT',        189.00,  20, 'Liquid',   'AM4, AM5, LGA1700',          300),
+(7,  'Corsair iCUE H150i Elite Capellix XT', 'Corsair',199.00, 15, 'Liquid', 'AM4, AM5, LGA1700',    350),
+(8,  'Arctic Liquid Freezer II 280', 'Arctic',109.00, 25, 'Liquid',   'AM4, AM5, LGA1700',          320),
+(9,  'Lian Li Galahad 240',   'Lian Li',     119.00,  22, 'Liquid',   'AM4, AM5, LGA1700',          300),
+(10, 'Thermaltake Toughliquid 240 ARGB', 'Thermaltake',99.00, 28, 'Liquid', 'AM4, AM5, LGA1700',    280);
+
+INSERT INTO cooling_images (cooling_id, image_url) VALUES
+(1,  'https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2022/5/pr_2022_5_18_13_12_18_91_00.jpg'),
+(2,  'https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2019/8/pr_2019_8_6_9_36_20_694_00.jpg'),
+(3,  'https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2018/12/pr_2018_12_19_12_4_40_354_00.jpg'),
+(4,  'https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2023/3/pr_2023_3_9_12_11_24_833_00.jpg'),
+(5,  'https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2022/8/pr_2022_8_25_10_47_15_882_00.jpg'),
+(6,  'https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2023/9/pr_2023_9_1_8_55_43_703_00.jpg'),
+(7,  'https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2023/2/pr_2023_2_16_11_38_32_224_00.jpg'),
+(8,  'https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2022/10/pr_2022_10_6_12_3_4_452_00.jpg'),
+(9,  'https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2023/1/pr_2023_1_20_10_55_6_511_00.jpg'),
+(10, 'https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2023/7/pr_2023_7_13_9_16_2_229_00.jpg');
+
+TRUNCATE cooling_images;
+TRUNCATE cooling CASCADE;
